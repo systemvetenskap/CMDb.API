@@ -8,3 +8,28 @@ Följande endpoints finns att tillgå
 ```html
 api/movie
 ```
+Denna endpoint listar alla filmer i databasen
+```json
+[
+    {
+        "imdbID": "tt0111161",
+        "numberOfLikes": 3,
+        "numberOfDislikes": 3
+    },
+    {
+        "imdbID": "tt9860728",
+        "numberOfLikes": 6,
+        "numberOfDislikes": 9
+    },
+    {
+        "imdbID": "tt0258914",
+        "numberOfLikes": 3,
+        "numberOfDislikes": 1
+    },
+    {
+        "imdbID": "tt0114369",
+        "numberOfLikes": 5,
+        "numberOfDislikes": 1
+    }
+]
+```
