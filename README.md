@@ -50,8 +50,19 @@ api/movie/imdbid/like
 api/movie/imdbid/dislike
 ```
 >Ger antingen en röst på gilla eller ogilla på en specifik film
+Returnerar: 
+```json
+{
+    "imdbID": "tt0111161",
+    "numberOfLikes": 3,
+    "numberOfDislikes": 3
+}
+```
 
 
+
+
+### Topplistan
 ```html
 api/toplist
 ```
