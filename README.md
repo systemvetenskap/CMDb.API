@@ -44,4 +44,22 @@ api/movie/imdbid
     "numberOfDislikes": 3
 }
 ```
+```html
+api/toplist
+```
+>Listar ratings som en topplilsta. Observer att länken inte bygger på Movie.
+>Topplistan kan sorteras utifrån följande växlar:
+```
+sort
+```
+Asc eller desc
 
+```
+type
+```
+Rating eller popularity
+
+```
+count
+```
+Antal filmer som ska visas
