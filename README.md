@@ -49,10 +49,11 @@ api/toplist
 ```
 >Listar ratings som en topplilsta. Observer att länken inte bygger på Movie.
 >Topplistan kan sorteras utifrån följande växlar:
-```
-sort
-```
-Asc eller desc
+
+Växel | Värde
+------|------
+sort | Asc eller desc
+
 
 ```
 type
