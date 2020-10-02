@@ -44,6 +44,14 @@ api/movie/imdbid
     "numberOfDislikes": 3
 }
 ```
+
+```html
+api/movie/imdbid/like
+api/movie/imdbid/dislike
+```
+>Ger antingen en röst på gilla eller ogilla på en specifik film
+
+
 ```html
 api/toplist
 ```
@@ -53,14 +61,6 @@ api/toplist
 Växel | Värde
 ------|------
 sort | Asc eller desc
+type | Rating eller popularity
+count | heltal (antal filmer som visas)
 
-
-```
-type
-```
-Rating eller popularity
-
-```
-count
-```
-Antal filmer som ska visas
