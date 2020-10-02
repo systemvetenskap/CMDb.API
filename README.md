@@ -8,7 +8,7 @@ Följande endpoints finns att tillgå
 ```html
 api/movie
 ```
-Denna endpoint listar alla filmer i databasen
+>Denna endpoint listar alla filmer i databasen
 ```json
 [
     {
@@ -33,3 +33,15 @@ Denna endpoint listar alla filmer i databasen
     }
 ]
 ```
+```html
+api/movie/imdbid
+```
+>Listar ratings för en film utifrån IMDB movie id
+```json
+{
+    "imdbID": "tt0111161",
+    "numberOfLikes": 3,
+    "numberOfDislikes": 3
+}
+```
+
