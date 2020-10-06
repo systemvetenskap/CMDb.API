@@ -6,7 +6,7 @@ Detta API hämtar och lagrar omröstningar i Communityn CMDb.
 Följande endpoints finns att tillgå
 
 ```html
-api/movie
+'GET' api/movie
 ```
 >Denna endpoint listar alla filmer i databasen
 ```json
