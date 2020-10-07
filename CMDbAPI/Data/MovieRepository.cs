@@ -190,7 +190,6 @@ namespace CMDbAPI
                     conn.Open();
                     using (var command = new NpgsqlCommand(stmt.ToString(), conn))
                     {
-                        //command.Parameters.AddWithValue("id", imdbId);
                         using (var reader = await command.ExecuteReaderAsync())
                         {
                             while (reader.Read())
