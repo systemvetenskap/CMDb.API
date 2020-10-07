@@ -6,7 +6,7 @@ Detta API hämtar och lagrar omröstningar i Communityn CMDb.
 Följande endpoints finns att tillgå
 
 ```html
-api/movie
+'GET' api/movie
 ```
 >Denna endpoint listar alla filmer i databasen
 ```json
@@ -34,7 +34,7 @@ api/movie
 ]
 ```
 ```html
-api/movie/imdbid
+'GET' api/movie/imdbid
 ```
 >Listar ratings för en film utifrån IMDB movie id
 ```json
@@ -46,8 +46,8 @@ api/movie/imdbid
 ```
 
 ```html
-api/movie/imdbid/like
-api/movie/imdbid/dislike
+'POST' api/movie/imdbid/like
+'POST' api/movie/imdbid/dislike
 ```
 >Ger antingen en röst på gilla eller ogilla på en specifik film
 Returnerar: 
@@ -64,7 +64,7 @@ Returnerar:
 
 ### Topplistan
 ```html
-api/toplist
+'GET' api/toplist
 ```
 >Listar ratings som en topplilsta. Observer att länken inte bygger på Movie.
 >Topplistan kan sorteras utifrån följande växlar:
