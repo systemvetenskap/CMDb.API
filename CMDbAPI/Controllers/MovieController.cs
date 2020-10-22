@@ -29,8 +29,9 @@ namespace CMDbAPI.Controllers
         {
             return await context.GetMovieRatings(imdbId);
         }
-
-        [HttpPost("{imdbId}/like")]
+        // Ändra här om du vill ha en Post hellre än en Get
+       // [HttpPost("{imdbId}/like")]
+        [HttpGet("{imdbId}/like")]
         // GET: api/Movie/3/Like
         public async Task<ActionResult<Movie>> LikeMovie(string imdbId)
         {
