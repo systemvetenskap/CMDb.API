@@ -1,4 +1,6 @@
-﻿namespace CMDbAPI
+﻿using System;
+
+namespace CMDbAPI
 {
     /// <summary>
     /// DTO object for passing parameters to repository
@@ -21,5 +23,10 @@
         /// Popularity = sort by sum of likes and dislikes. Many reactions equals high popularity 
         /// </summary>
         public string Type { get; set; }
+
+        /// <summary>
+        /// Only use ratings since this date
+        /// </summary>
+        public DateTime? Since { get; set; }
     }
 }

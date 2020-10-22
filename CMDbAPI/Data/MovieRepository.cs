@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using CMDbAPI.Controllers;
@@ -171,7 +172,13 @@ namespace CMDbAPI
             stmt.AppendLine("from ( select imdbid, ");
             stmt.AppendLine("count(*) filter (where liked) as like_count, ");
             stmt.AppendLine("count(*) filter (where not liked) as dislike_count ");
-            stmt.AppendLine("from rating group by imdbid ");
+            stmt.AppendLine("from rating ");
+            if (parameter?.Since != null)
+            {
+                stmt.AppendLine("where date >= ");
+                stmt.Append("'" + parameter.Since.Value.ToString("yyyy-MM-dd HH:mm:ss") + "' ");
+            }
+            stmt.AppendLine("group by imdbid ");
             stmt.AppendLine(") temp ");
             stmt.AppendLine("order by diff ");
             stmt.Append(parameter.SortOrder ?? "desc ");
