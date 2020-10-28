@@ -40,7 +40,7 @@ namespace CMDbAPI.Controllers
 
             return await context.Rate(imdbId);
         }
-        [HttpGet("{imdbId}/like")]
+        [HttpGet("{imdbId}/dislike")]
         // GET: api/Movie/3/Dislike
         public async Task<ActionResult<Movie>> DislikeMovie(string imdbId)
         {
