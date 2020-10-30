@@ -8,6 +8,7 @@ namespace CMDbAPI
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "CmdbApiPolicy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -18,6 +19,16 @@ namespace CMDbAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("*")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod();
+                                  });
+            });
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddControllers();
         }
@@ -33,6 +44,7 @@ namespace CMDbAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 
